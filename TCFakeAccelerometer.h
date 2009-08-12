@@ -18,3 +18,17 @@
 @property(nonatomic,assign) id<UIAccelerometerDelegate> delegate;
 @property NSTimeInterval updateInterval;
 @end
+
+/*
+
+You could do this in your app:
+#import "TCFakeAccelerometer.h"
+#if TARGET_IPHONE_SIMULATOR
+#	define AppAccelerometer TCFakeAccelerometer
+#else
+#	define AppAccelerometer UIAccelerometer
+#endif
+
+and then use AppAccelerometer instead of UIAccelerometer in your code.
+
+*/
